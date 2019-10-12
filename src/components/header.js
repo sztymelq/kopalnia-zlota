@@ -1,15 +1,17 @@
 import PropTypes from "prop-types"
 import React from "react"
-import "./header.scss";
-import { Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
+import styles from './header.module.scss'
 
-const Header = ({ siteTitle }) => (
-  <div className="header">
-    <Link to="/">Pakiety</Link>
-    <Link to="/">Cennik</Link>
-    <Link to="/">Kontakt</Link>
-  </div>
-)
+const Header = () => {
+  return (
+    <div className={styles.header}>
+      <Link to="/">Pakiety</Link>
+      <Link to="/">Cennik</Link>
+      <Link to="/">Kontakt</Link>
+    </div>
+  )
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
@@ -20,3 +22,15 @@ Header.defaultProps = {
 }
 
 export default Header
+
+export const elo = graphql`query HeaderQuery {
+  allMarkdownRemark {
+    edges {
+      node {
+        id
+        excerpt
+      }
+    }
+  }
+}
+`
