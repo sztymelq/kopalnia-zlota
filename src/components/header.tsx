@@ -1,7 +1,7 @@
-import PropTypes from "prop-types"
-import React from "react"
-import { graphql, Link } from 'gatsby';
-import styles from './header.module.scss'
+import * as PropTypes from "prop-types"
+import * as React from "react"
+import { Link } from 'gatsby';
+import styles from './header.module.scss';
 
 const Header = () => {
   return (
@@ -22,15 +22,3 @@ Header.defaultProps = {
 }
 
 export default Header
-
-export const elo = graphql`query HeaderQuery {
-  allMarkdownRemark {
-    edges {
-      node {
-        id
-        excerpt
-      }
-    }
-  }
-}
-`
