@@ -23,14 +23,3 @@ Header.defaultProps = {
 
 export default Header
 
-export const elo = graphql`query HeaderQuery {
-  allMarkdownRemark {
-    edges {
-      node {
-        id
-        excerpt
-      }
-    }
-  }
-}
-`

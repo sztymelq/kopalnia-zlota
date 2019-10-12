@@ -61,9 +61,11 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home"/>
       <div className="container">
+
+        elosiema to ejs ttekst
       </div>
 
-      <Img fluid={sztylet.file.childImageSharp.fluid}/>
+      {/*<Img fluid={sztylet.file.childImageSharp.fluid}/>*/}
 
       <Image/>
     </Layout>);
