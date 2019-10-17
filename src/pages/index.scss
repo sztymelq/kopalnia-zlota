@@ -1,5 +1,14 @@
 .container {
+  display: flex;
   width: 100%;
-  //height: 200vh;
   background: lightgray;
+  overflow-x: auto;
+}
+
+.square {
+  background: blueviolet;
+  width: 200px;
+  height: 200px;
+  margin: 2rem;
+  flex: 0 0 auto;
 }

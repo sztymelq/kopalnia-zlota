@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Image from '../components/image';
 import './index.scss';
 import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
@@ -57,17 +56,21 @@ const IndexPage = () => {
 }
   `);
 
+  const values = [1,2,3,4,5,6,7,8,9,0].map((l) => {
+    return (
+      <div className="square">{l}</div>
+    )
+  });
+
   return (
     <Layout>
       <SEO title="Home"/>
       <div className="container">
-
-        elosiema to ejs ttekst
+        {values}
       </div>
 
       {/*<Img fluid={sztylet.file.childImageSharp.fluid}/>*/}
 
-      <Image/>
     </Layout>);
 };
 
